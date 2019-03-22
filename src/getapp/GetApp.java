@@ -29,24 +29,28 @@ public class GetApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("LINEA 1");
+        System.out.println("LINEA 1");
+        System.out.println("LINEA 1");
+        
         String url = "https://jsonplaceholder.typicode.com/todos/1";
         //String url = "https://api.mercadolibre.com/sites/MLA/search?nickname=TETE2870021";
         //String url = "https://api.nasa.gov/planetary/apod?api_key=BNnOMpUYGOuT2y8VzMDYzeuqD7ZDmMlZclTCGO7T";
 
-        String respuesta = "";
+        String respuesta;
         try {
             respuesta = peticionHttpGet(url);
             System.out.println("La respuesta es:\n" + respuesta);
         } catch (Exception e) {
             // Manejar excepción
-            e.printStackTrace();
+            System.err.println("Error: " + e);
         }
 
         metodoDos();
         try {
             metodoTres();
         } catch (IOException ex) {
-            Logger.getLogger(GetApp.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("Error: " + ex);
         }
     }
 
@@ -100,7 +104,7 @@ public class GetApp {
             new InputStreamReader(conn.getInputStream());
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println("Error: " + e);
         }
     }
 
