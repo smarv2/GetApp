@@ -16,13 +16,13 @@ import java.net.URL;
  * @author MXI01020253A
  */
 public class MetodoDos {
-    
+
     static void metodoDos() {
-     try {
+        try {
             System.out.println("METODO 2");
             System.out.println("METODO 2");
             System.out.println("METODO 2");
-            
+
             //String url = "https://api.mercadolibre.com/sites/MLA/search?nickname=TETE2870021";
             String url = "https://jsonplaceholder.typicode.com/todos/1";
 
@@ -38,9 +38,9 @@ public class MetodoDos {
             String basicAuth = "Basic " + javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes("UTF-8"));
             conn.setRequestProperty("Authorization", basicAuth);*/
             String data = "{\"format\":\"json\",\"pattern\":\"#\"}";
-         try (OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream())) {
-             out.write(data);
-         }
+            try (OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream())) {
+                out.write(data);
+            }
 
             new InputStreamReader(conn.getInputStream());
 

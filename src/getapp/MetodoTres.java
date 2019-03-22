@@ -22,7 +22,7 @@ import org.apache.http.impl.client.HttpClients;
  */
 public class MetodoTres {
 
- static void metodoTres() throws IOException {
+    static void metodoTres() throws IOException {
         System.out.println("METODO 3");
         System.out.println("METODO 3");
         System.out.println("METODO 3");
@@ -52,11 +52,11 @@ public class MetodoTres {
         //Reading the response
         StringBuilder result = new StringBuilder();
         String line = "";
-        
+
         while ((line = rd.readLine()) != null) {
             result.append(line);
         }
-        
+
         System.out.println(result.toString());
-    }    
+    }
 }
