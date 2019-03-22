@@ -5,6 +5,7 @@
  */
 package getapp;
 
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
@@ -37,13 +38,13 @@ public class MetodoDos {
             String basicAuth = "Basic " + javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes("UTF-8"));
             conn.setRequestProperty("Authorization", basicAuth);*/
             String data = "{\"format\":\"json\",\"pattern\":\"#\"}";
-            OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream());
-            out.write(data);
-            out.close();
+         try (OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream())) {
+             out.write(data);
+         }
 
             new InputStreamReader(conn.getInputStream());
 
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.err.println("Error: " + e);
         }
     }
