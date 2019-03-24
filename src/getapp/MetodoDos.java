@@ -23,8 +23,8 @@ public class MetodoDos {
             System.out.println("METODO 2");
             System.out.println("METODO 2");
 
-            //String url = "https://api.mercadolibre.com/sites/MLA/search?nickname=TETE2870021";
-            String url = "https://jsonplaceholder.typicode.com/todos/1";
+            String url = "https://api.mercadolibre.com/sites/MLA/search?nickname=TETE2870021";
+            //String url = "https://jsonplaceholder.typicode.com/todos/1";
 
             URL obj = new URL(url);
             HttpURLConnection conn = (HttpURLConnection) obj.openConnection();

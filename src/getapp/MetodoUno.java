@@ -21,8 +21,8 @@ public class MetodoUno {
         System.out.println("METODO 1");
         System.out.println("METODO 1");
 
-        String url = "https://jsonplaceholder.typicode.com/todos/1";
-        //String url = "https://api.mercadolibre.com/sites/MLA/search?nickname=TETE2870021";
+        //String url = "https://jsonplaceholder.typicode.com/todos/1";
+        String url = "https://api.mercadolibre.com/sites/MLA/search?nickname=TETE2870021";
         //String url = "https://api.nasa.gov/planetary/apod?api_key=BNnOMpUYGOuT2y8VzMDYzeuqD7ZDmMlZclTCGO7T";
 
         String respuesta;

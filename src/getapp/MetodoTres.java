@@ -26,8 +26,9 @@ public class MetodoTres {
         System.out.println("METODO 3");
         System.out.println("METODO 3");
         System.out.println("METODO 3");
+        //String endpoint = "https://jsonplaceholder.typicode.com/todos/1";
         //String endpoint = "https://api.mercadolibre.com/sites/MLA/search?nickname=TETE2870021";
-        String endpoint = "https://jsonplaceholder.typicode.com/todos/1";
+        String endpoint = "https://api.mercadolibre.com/users/me?access_token=APP_USR-142640628617920-032321-64f3b021707b2606fb002bc24b80891a-84360136";
 
         String url = endpoint;
 
@@ -57,6 +58,6 @@ public class MetodoTres {
             result.append(line);
         }
 
-        System.out.println(result.toString());
+        System.out.println("Resultado: " + result.toString());
     }
 }
